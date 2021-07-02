@@ -1,8 +1,16 @@
+import { Route, BrowserRouter as Router } from "react-router-dom";
+
+import HomeScreen from "./screens/HomeScreen";
+import Header from "./components/Header";
+
 const App = () => {
   return (
-    <div className='App'>
-      <h1>Hello World</h1>
-    </div>
+    <>
+      <Router>
+        <Header />
+        {/* <HomeScreen /> */}
+      </Router>
+    </>
   );
 };
 
