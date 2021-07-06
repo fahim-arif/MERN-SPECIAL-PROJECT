@@ -98,7 +98,7 @@ const HeroSection = () => {
         </div>
         <Image
           className='hero-img'
-          src='images/photo-1485470733090-0aae1788d5af.jpg'
+          src='images/hero-section2.jpg'
           fluid
         ></Image>
       </div>
