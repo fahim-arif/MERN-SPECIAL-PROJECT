@@ -1,0 +1,87 @@
+.registration {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+.reg_form {
+  max-width: 700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+}
+.reg_form .title {
+  font-size: 2rem;
+  font-weight: 600;
+  position: relative;
+}
+.reg_form .title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 35px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+.reg_form .user_details {
+  display: block;
+}
+form .user_details .input_box {
+  width: calc(100% / 2 - 15px);
+  margin: 20px 0 12px 0;
+}
+.user_details .input_box .details {
+  display: block;
+  font-weight: 800;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+.user_details .input_box input {
+  height: 45px;
+  width: 200%;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-left: 15px;
+  font-size: 1rem;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user_details .input_box input:focus {
+  border-color: #9b59b6;
+}
+.reg_form .btn {
+  display: block;
+  width: 100%;
+  background-color: #8689cf;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+.reg_form .btn:hover {
+  background-color: #985fb9;
+}
+.details {
+  font-weight: 700;
+}
+.reg_form a {
+  font-weight: 700;
+}
+
+@media (max-width: 584px) {
+  .reg_form {
+    max-width: 100%;
+  }
+  form .user_details .input_box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .user_details .input_box input {
+    width: 100%;
+  }
+}
