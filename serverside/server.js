@@ -1,5 +1,5 @@
 import dotenv from "dotenv";
-
+import express from "express";
 import userRoutes from "./routes/userRoutes.js";
 import connectDB from "./config/db.js";
 import { tutors } from "./tution.js";
