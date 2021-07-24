@@ -12,9 +12,27 @@ code {
     monospace;
 }
 
+
+
+
+
+
+
+
+
+:root {
+  --dark: #00bd9d;
+  --light: #8bd7d2;
+  --white: #fffbfa;
+}
+
 .hero-section img {
   width: 100%;
   height: 50vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -10;
 }
 /* Carousel  */
 .carousel-item img {
@@ -83,23 +101,15 @@ form > .button {
 .main-img {
   height: 50vh;
 }
-/* .main-img::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: inherit;
-  height: inherit;
-  background-color: black;
-  opacity: 1;
-  z-index: 1;
-} */
+
 .carousel-inner {
   height: 50vh;
 }
 
 .hero-section {
   position: relative;
+  display: block;
+  height: 50vh;
 }
 
 .search-box {
@@ -109,15 +119,16 @@ form > .button {
   transform: translate(-50%, -50%);
 }
 .hero-section-heading {
-  position: absolute;
   color: white;
   font-weight: 600;
   font-size: 4rem;
-  display: inline;
+
+  width: 100%;
+  text-align: center;
 }
 .main-section {
   position: relative;
-  height: 40vh;
+  height: 50vh;
 }
 
 .logo {
@@ -207,4 +218,88 @@ nav {
   .hero-section-mobile h1 {
     font-size: 1.8rem;
   }
+}
+
+/* HomeScreen Robin */
+.latest__tutor__heading {
+  float: left;
+  border-bottom: 2px solid gray;
+  margin: 10px;
+}
+
+/* Contact-us Musfique */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.top-section {
+  width: 100%;
+  /* height: 90vh; */
+  background-image: linear-gradient(
+      rgba(61, 216, 190, 0.76),
+      rgba(61, 216, 190, 0.76)
+    ),
+    url(./components/images/bg1.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+#navbarNav .navbar-nav .nav-item .nav-link {
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 10px;
+  padding: 10px 15px;
+}
+#navbarNav .navbar-nav .nav-item .nav-link:hover {
+  background-color: #00b894;
+  color: #fff;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form form {
+  width: 90%;
+  border-radius: 15px;
+  margin: 50px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+form h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.contact_form input,
+.textarea {
+  margin-bottom: 20px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: rgb(240, 237, 237);
+  padding: 10px;
+}
+.form .textarea {
+  height: 100px;
+}
+
+.form .button {
+  font-weight: 700;
+  letter-spacing: 3px;
+  width: 200px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  color: #fff;
+  background-color: #00b894;
 }

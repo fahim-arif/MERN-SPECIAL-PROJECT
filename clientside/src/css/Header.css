@@ -1,0 +1,141 @@
+.opacity {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: black;
+  opacity: 0.5;
+  z-index: 2;
+}
+
+.navbar-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-logo {
+  justify-self: start;
+  margin-left: 60px;
+  cursor: pointer;
+  width: 14rem;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 15px;
+  width: 75vw;
+  justify-content: end;
+}
+
+.nav-link {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #55595c;
+  text-transform: uppercase;
+}
+
+.nav-link::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f55139;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.nav-link:hover::after {
+  width: 90%;
+}
+
+.fa-bars {
+  color: #000;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fa-times {
+  color: #fff;
+}
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  margin-right: 20px;
+  margin-left: 35px;
+  cursor: pointer;
+}
+
+.side-bar {
+  background-color: #060b26;
+  height: 100vh;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  left: -100%;
+  top: 0;
+  transition: 850ms;
+  z-index: 3;
+}
+
+.side-bar.active {
+  left: 0;
+  z-index: 3;
+  transition: 350ms;
+}
+
+.side-bar-menu {
+  width: 150px;
+}
+
+.side-bar-menu .nav-link {
+  margin: 20px 0;
+  width: 100%;
+}
+.side-bar-menu .nav-link:hover {
+  background-color: #fff;
+}
+
+.side-services,
+.side-contact,
+.side-sign-in,
+.side-join {
+  display: none;
+}
+
+@media screen and (max-width: 1000px) {
+  .menu-icon {
+    display: block;
+  }
+  .navbar-logo {
+    margin-left: -44px;
+  }
+  .nav-sign-in {
+    display: none;
+  }
+  .side-sign-in,
+  .side-join {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .nav-contact {
+    display: none;
+  }
+  .side-contact {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .nav-services {
+    display: none;
+  }
+  .side-services {
+    display: block;
+  }
+}
