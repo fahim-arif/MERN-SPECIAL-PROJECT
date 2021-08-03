@@ -1,0 +1,359 @@
+/* hero section css */
+
+.hero-section {
+  height: 450px;
+  font-family: "Work Sans", "sans-serif";
+}
+.hero--titles {
+  font-family: "Work Sans", "sans-serif";
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.hero-section--heading {
+  letter-spacing: normal;
+  font-weight: 800;
+  font-size: 1.625rem;
+  text-align: center;
+  padding: 26px var(--mb-side-space);
+}
+.hero-section--sub_heading {
+  letter-spacing: normal;
+  text-align: center;
+  padding: 0 var(--mb-side-space);
+  margin-bottom: 4rem;
+}
+.hero-section--btn {
+  font-size: var(--font-normal);
+  display: block;
+  margin: 0.875rem var(--mb-side-space);
+}
+
+.btn-purple:hover {
+  background-color: #3e3fa3;
+  color: #ffff;
+}
+.btn-transparent:hover {
+  background-color: #5c565625;
+}
+
+/* Hire a pro section css */
+.pro_section_card-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+.pro_section_card-wrapper:active,
+.pro_section_card-wrapper:hover,
+.pro_section_card-wrapper:focus {
+  outline: none;
+  border: none;
+}
+
+.card {
+  width: 100%;
+  height: 347px;
+  /* border-radius: 16px; */
+  overflow: hidden;
+  cursor: pointer;
+}
+.pro_section_card_image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  z-index: 5;
+}
+.pro_section_card_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.5s ease-in;
+}
+.pro_section_card_image img:hover {
+  opacity: 0.6;
+  transition: 0.5s;
+}
+
+.hire_pro_title {
+  position: absolute;
+  z-index: 100;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hire_pro_title h2 {
+  color: #fff;
+  text-align: center;
+}
+.slick-next {
+  right: 28px;
+  z-index: 100;
+}
+.slick-prev {
+  left: 0;
+  z-index: 100;
+}
+.hire_pro_section {
+  /* padding: 0 420px; */
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  /* position: relative; */
+  /* background: #333; */
+}
+/* end */
+.slick-prev:before,
+.slick-next:before {
+  font-size: 3rem;
+  background-color: #000;
+  text-align: center;
+  border-radius: 500px;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+/* .slick-prev:before {
+  margin-right: 100px;
+} */
+.pro_section_rows {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+.pro_section_columns {
+  flex: 0 1 15rem;
+}
+
+.pro_section_columns img {
+  /* position: fixed; */
+  width: 284px;
+  height: 242px;
+  object-fit: cover;
+}
+.flex-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.how_we_work_section {
+  height: 650px;
+  background-color: #f1fdf7;
+}
+.work_section_title {
+  text-align: center;
+  padding: 0 10px;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 20px 0 20px 0;
+}
+.work_section_helper {
+  display: flex;
+  margin: 30px 0 0 0;
+}
+.tick_mark_svg {
+  width: 30px;
+  height: 30px;
+  margin: 0 0 0 20px;
+}
+.work_section_content {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0 10px;
+}
+.work_tick_mark {
+  margin: 10px;
+}
+.work_section_video {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+.work_section_video_wrapper {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+.how_we_work_section .work_section_video_wrapper::after {
+  content: "";
+  display: inline-block;
+  background: url(http://localhost:3000/images/play_button.png) no-repeat;
+  background-size: 80px;
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/* HOW to Get a Job/Service */
+.how_to_get_job_section {
+  height: 550px;
+  background: linear-gradient(
+    97.63deg,
+    rgba(88, 0, 211, 0.86) 51.61%,
+    rgba(73, 0, 119, 0.9) 87.78%
+  );
+}
+.find-work-content {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.find_opportunity_btn {
+  font-size: var(--font-normal);
+  display: block;
+  margin: 3rem var(--mb-side-space);
+}
+.suitable_service_section {
+  height: 390px;
+  position: relative;
+}
+.suitable_service_img {
+  position: absolute;
+  height: 390px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  z-index: -1;
+}
+.suitable_service_title {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 20px 30px;
+}
+
+/* Our client Saying section */
+.our_client_saying_section {
+  position: relative;
+  height: 540px;
+}
+.client_saying_background {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  background-color: var(--clr-primary);
+  z-index: -1;
+  top: 60px;
+  left: 0;
+}
+.client_saying_card {
+  width: 285px;
+  height: 500px;
+}
+.client_saying_img {
+  position: absolute;
+  width: 180px;
+  height: 176px;
+  border-radius: 50%;
+  object-fit: cover;
+  left: 50%;
+  top: 20px;
+  transform: translate(-50%);
+}
+.client_saying_card_content {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+}
+.client_saying_card__rating {
+  position: absolute;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+}
+.client_saying_card__rating i {
+  color: #fee407;
+  font-size: 1.3rem;
+}
+.client_saying_card__title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.client_saying_card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: relative;
+  background-color: #fff;
+}
+.client_saying_card_wrapper {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Footer & please move to index.css after finishing footer */
+.footer {
+  padding: 0 250px;
+  height: 710px;
+}
+.footer-wrapper {
+  /* margin: 1rem 5rem; */
+  margin: 1rem auto;
+}
+.site_footer {
+  border-top: 1px solid #e4e5e7;
+  position: relative;
+}
+.footer__row {
+  display: flex;
+  /* flex-wrap: wrap; */
+  gap: 1em;
+  /* max-width: 1200px; */
+}
+.footer__col {
+  flex: 0 1 20em;
+  width: 150px;
+  height: 150px;
+  background-color: #000;
+}
+.footer__row > * {
+  flex-basis: 100%;
+}
+.footer__col:nth-child(4) {
+}
+
+@media only screen and (min-width: 600px) {
+  .column img {
+    width: 270px;
+    height: 224px;
+    object-fit: cover;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .hire_pro_section {
+    padding: 0 10px;
+  }
+  .card {
+    /* display: none; */
+    /* height: 150px;
+    width: 150px; */
+  }
+  .pro_section_card_image img {
+    /* height: 150px;
+    width: 150px; */
+  }
+}

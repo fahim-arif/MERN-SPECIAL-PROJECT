@@ -1,3 +1,38 @@
+/* fahim */
+.nav {
+  display: block;
+  height: inherit;
+  width: inherit;
+}
+header {
+  padding: 1rem;
+  margin: 0 5px;
+  height: 68px;
+}
+.nav-menu {
+  height: inherit;
+  width: inherit;
+}
+.nav__list {
+  height: inherit;
+  width: inherit;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  width: 100%;
+}
+.nav__list-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Moin */
 .opacity {
   width: 100vw;
   height: 100vh;
@@ -5,6 +40,7 @@
   background-color: black;
   opacity: 0.5;
   z-index: 2;
+  color: var(--clr-dark);
 }
 
 .navbar-items {
@@ -14,18 +50,19 @@
 }
 
 .navbar-logo {
-  justify-self: start;
+  /* justify-self: start;
   margin-left: 60px;
   cursor: pointer;
-  width: 14rem;
+  width: 14rem; */
 }
 
 .nav-menu {
-  display: grid;
+  margin: 0;
+  /* display: grid;
   grid-template-columns: repeat(4, auto);
   grid-gap: 15px;
   width: 75vw;
-  justify-content: end;
+  justify-content: end; */
 }
 
 .nav-link {
@@ -62,8 +99,6 @@
 .menu-icon {
   display: none;
   font-size: 2rem;
-  margin-right: 20px;
-  margin-left: 35px;
   cursor: pointer;
 }
 
@@ -108,10 +143,7 @@
 
 @media screen and (max-width: 1000px) {
   .menu-icon {
-    display: block;
-  }
-  .navbar-logo {
-    margin-left: -44px;
+    display: inline-block;
   }
   .nav-sign-in {
     display: none;
@@ -131,11 +163,35 @@
   }
 }
 
-@media screen and (max-width: 750px) {
-  .nav-services {
+@media screen and (max-width: 900px) {
+  .nav__list-item--services {
     display: none;
   }
+  .nav__list-item--about {
+    display: none;
+  }
+  .nav__list-item--contact {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .container,
+  .container-fluid,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl {
+    padding: 0 20px;
+  }
+  .navbar-logo {
+    width: auto;
+  }
+
   .side-services {
     display: block;
+  }
+  .nav__list-item--sign_in {
+    display: none;
   }
 }
