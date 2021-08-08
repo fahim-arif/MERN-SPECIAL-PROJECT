@@ -38,7 +38,13 @@ code {
 }
 .button-secondary {
   background: linear-gradient(180deg, #f92c8b 0%, #f92c8b 100%);
+  background-color: #000;
   border-radius: 11px;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+.button-secondary:hover {
+  background: linear-gradient(180deg, #c50760 0%, #bb1d66 100%);
   color: #fff;
 }
 
@@ -47,7 +53,6 @@ code {
   color: #000000;
   border-radius: 11px;
 }
-
 
 .btn {
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
