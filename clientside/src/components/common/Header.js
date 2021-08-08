@@ -1,55 +1,111 @@
 import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import "../../css/Header.css";
+import { margin } from "../../actions/marginActions";
 
 const Header = () => {
   const [clicked, setClicked] = useState(false);
   const [windowSize, setWindowSize] = useState(0);
+
+  const dispatch = useDispatch();
+  const sideMargin = useSelector((state) => state.sideMargin);
+  const { margin: space } = sideMargin;
+  console.log(space);
+
+  // example
+
+  function debounce(fn, ms) {
+    let timer;
+
+    return (_) => {
+      clearTimeout(timer);
+
+      timer = setTimeout((_) => {
+        timer = null;
+
+        fn.apply(this, arguments);
+      }, ms);
+    };
+  }
+
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth,
+  });
+
+  useEffect(() => {
+    const debouncedHandleResize = debounce(function handleResize() {
+      setDimensions({
+        width: window.innerWidth,
+      });
+    }, 1000);
+
+    window.addEventListener("resize", debouncedHandleResize);
+
+    return (_) => {
+      window.removeEventListener("resize", debouncedHandleResize);
+    };
+  });
+  // example end
 
   const showSideBar = () => {
     setClicked(!clicked);
   };
 
   useEffect(() => {
-    if (window.innerWidth > 1200) {
-      setWindowSize((window.innerWidth - 1217) / 2);
+    if (dimensions.width > 1200) {
+      setWindowSize((dimensions.width - 1217) / 2);
+    } else if (dimensions.width < 1200 && dimensions.width > 768) {
+      setWindowSize((dimensions.width - 768) / 2);
     } else {
-      setWindowSize(10);
+      setWindowSize(20);
     }
-  }, []);
+  }, [dimensions.width]);
+
+  useEffect(
+    () => {
+      dispatch(margin(windowSize));
+    },
+    [windowSize],
+    dispatch
+  );
 
   return (
-    <header style={{ margin: `0 ${windowSize}px` }}>
+    <header style={{ margin: `0 ${space}px` }}>
       <div className={clicked ? "opacity" : ""} onClick={showSideBar}></div>
-
       <nav className='nav'>
         <div className={clicked ? "nav-menu active" : "nav-menu"}>
           <ul className='nav__list'>
-            <div className='menu-icon' onClick={showSideBar}>
-              <img
-                src='images/bars.svg'
-                alt='Menu bars'
-                className='menu_bars'
-              />
+            <div className='header_col hambarger_and_logo'>
+              <div className='menu-icon' onClick={showSideBar}>
+                <img
+                  src='images/bars.svg'
+                  alt='Menu bars'
+                  className='menu_bars'
+                />
+              </div>
+
+              <Link to='/'>
+                <img className='navbar-logo' src='images/logo.svg' alt='logo' />
+              </Link>
             </div>
-            <Link to='/'>
-              <img className='navbar-logo' src='images/logo.svg' alt='logo' />
-            </Link>
-            <li className='nav__list-item nav__list-item--services'>
-              <Link to='/service'>Service</Link>
-            </li>
-            <li className='nav__list-item nav__list-item--about'>
-              <Link to='/about'>About</Link>
-            </li>
-            <li className='nav__list-item nav__list-item--contact'>
-              <Link to='/about'>Contact</Link>
-            </li>
-            <li className='nav__list-item nav__list-item--sign_in'>
-              <Link to='/sign-in'>Sign In</Link>
-            </li>
-            <li className='nav__list-item'>
-              <Link to='/login'>Join</Link>
-            </li>
+            <div className='header_col header_links'>
+              <li className='nav__list-item nav__list-item--services'>
+                <Link to='/service'>Service</Link>
+              </li>
+              <li className='nav__list-item nav__list-item--about'>
+                <Link to='/about'>About</Link>
+              </li>
+              <li className='nav__list-item nav__list-item--contact'>
+                <Link to='/about'>Contact</Link>
+              </li>
+              <li className='nav__list-item nav__list-item--sign_in'>
+                <Link to='/sign-in'>Sign In</Link>
+              </li>
+              <li className='nav__list-item nav_list--join'>
+                <Link to='/login'>Join</Link>
+              </li>
+            </div>
           </ul>
 
           {/* Sidebar section */}

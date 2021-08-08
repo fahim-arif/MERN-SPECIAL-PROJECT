@@ -4,9 +4,14 @@
   height: inherit;
   width: inherit;
 }
+.nav ul {
+  list-style: none;
+}
+.nav ul li a {
+  text-decoration: none;
+}
 header {
-  padding: 1rem;
-  margin: 0 5px;
+
   height: 68px;
 }
 .nav-menu {
@@ -14,6 +19,9 @@ header {
   width: inherit;
 }
 .nav__list {
+  top: 0;
+  left: 0;
+  position: relative;
   height: inherit;
   width: inherit;
   text-align: center;
@@ -25,11 +33,38 @@ header {
   font-size: 1rem;
   font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: normal;
   width: 100%;
 }
 .nav__list-item {
   text-decoration: none;
   color: inherit;
+}
+
+.header_links {
+  display: flex;
+}
+.header_links li {
+  padding: 0 15px;
+}
+.nav_list--join {
+  background-color: var(--clr-primary);
+  height: 30px;
+  width: 90px;
+  border-radius: 11px;
+
+  /* padding: 1rem 2rem; */
+}
+.nav_list--join a {
+  color: #fff;
+  margin-top: 100px;
+  line-height: 30px;
+  /* display: none; */
+}
+.header_col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Moin */
@@ -50,6 +85,7 @@ header {
 }
 
 .navbar-logo {
+  padding: 0 10px;
   /* justify-self: start;
   margin-left: 60px;
   cursor: pointer;
@@ -193,5 +229,30 @@ header {
   }
   .nav__list-item--sign_in {
     display: none;
+  }
+  .hambarger_and_logo {
+    /* position: absolute; */
+    align-items: center;
+    display: flex;
+    /* display: none; */
+    justify-content: center;
+  }
+  .navbar-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .nav__list {
+    /* justify-content: center; */
+  }
+}
+@media screen and (max-width:375px) {
+  .navbar-logo { 
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    padding: 0 10px;
   }
 }

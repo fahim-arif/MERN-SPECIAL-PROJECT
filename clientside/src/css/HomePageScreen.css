@@ -1,10 +1,14 @@
 /* hero section css */
 
+.section_gap {
+  margin: 55px 0 30px 0;
+}
+
 .hero-section {
   height: 450px;
   font-family: "Work Sans", "sans-serif";
 }
-.hero--titles {
+.hero_section_titles {
   font-family: "Work Sans", "sans-serif";
   letter-spacing: 0.5px;
   font-weight: 700;
@@ -26,8 +30,10 @@
 }
 .hero-section--btn {
   font-size: var(--font-normal);
+  text-align: center;
+  width: 100%;
   display: block;
-  margin: 0.875rem var(--mb-side-space);
+  margin: 10px 0;
 }
 
 .btn-purple:hover {
@@ -38,7 +44,8 @@
   background-color: #5c565625;
 }
 
-/* Hire a pro section css */
+/* <-----------Hire a pro section --------------> */
+
 .pro_section_card-wrapper {
   position: relative;
   width: 100%;
@@ -55,7 +62,6 @@
 .card {
   width: 100%;
   height: 347px;
-  /* border-radius: 16px; */
   overflow: hidden;
   cursor: pointer;
 }
@@ -99,26 +105,79 @@
   z-index: 100;
 }
 .hire_pro_section {
-  /* padding: 0 420px; */
+  /* background: url('../components/images/right-arrow-angle-svgrepo-com.svg'); */
   display: block;
   width: 100%;
   overflow: hidden;
-  /* position: relative; */
-  /* background: #333; */
 }
 /* end */
-.slick-prev:before,
+
+.hire_pro_section .slick-slider .slick-arrow {
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  margin-top: -24px;
+  text-align: center;
+  -webkit-box-shadow: 0 2px 5px 0 rgb(0 0 0 / 15%);
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 50%);
+  border: 0;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+.hire_pro_section .slick-slider .slick-prev::before {
+  content: "";
+  display: block;
+  /* display: inline-block; */
+  background: url("../components/images/arrowhead-thin-outline-to-the-left-svgrepo-com\ \(1\).svg")
+    no-repeat;
+  background-size: 16px 44px;
+  z-index: 1000;
+  color: #000;
+  margin-left: 14px;
+  height: 100%;
+  margin-top: 3px;
+}
+.hire_pro_section .slick-slider .slick-prev {
+  left: 20px;
+  top: 50%;
+  transform: translateX(-50%);
+}
+.hire_pro_section .slick-slider .slick-next {
+  right: -30px;
+  top: 50%;
+  transform: translateX(-50%);
+}
+.hire_pro_section .slick-slider .slick-next::before {
+  content: "";
+  display: block;
+  /* display: inline-block; */
+  background: url("../components/images/right-arrow-angle-svgrepo-com.svg")
+    no-repeat;
+  background-size: 15px 44px;
+  z-index: 1000;
+  color: #000;
+  margin-left: 18px;
+  height: 100%;
+  margin-top: 3px;
+}
+
+/* .slick-prev:before,
 .slick-next:before {
   font-size: 3rem;
+  height: 1rem;
+  width: 1rem;
   background-color: #000;
   text-align: center;
   border-radius: 500px;
   box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
   color: #fff;
-}
-/* .slick-prev:before {
-  margin-right: 100px;
 } */
+
 .pro_section_rows {
   display: flex;
   flex-wrap: wrap;
@@ -129,7 +188,6 @@
 }
 
 .pro_section_columns img {
-  /* position: fixed; */
   width: 284px;
   height: 242px;
   object-fit: cover;
@@ -140,6 +198,7 @@
   justify-content: center;
   align-items: center;
 }
+/* <-----------How we work section------------> */
 
 .how_we_work_section {
   height: 650px;
@@ -149,21 +208,23 @@
   text-align: center;
   padding: 0 10px;
   font-size: 1.25rem;
-  font-weight: 500;
+  font-weight: 600;
   padding: 20px 0 20px 0;
+}
+.work_section_title_table {
+  display: none;
 }
 .work_section_helper {
   display: flex;
   margin: 30px 0 0 0;
 }
-.tick_mark_svg {
-  width: 30px;
-  height: 30px;
-  margin: 0 0 0 20px;
+.work_section_helper i {
+  font-size: 1.2rem;
+  padding: 5px 0;
 }
 .work_section_content {
   font-size: 1rem;
-  font-weight: 400;
+  font-weight: 500;
   margin: 0 10px;
 }
 .work_tick_mark {
@@ -194,29 +255,79 @@
   transform: translate(-50%, -50%);
 }
 
-/* HOW to Get a Job/Service */
+/* <-------------HOW to Get a Job/Service-----------> */
+
 .how_to_get_job_section {
-  height: 550px;
+  position: relative;
+  height: 580px;
   background: linear-gradient(
     97.63deg,
     rgba(88, 0, 211, 0.86) 51.61%,
     rgba(73, 0, 119, 0.9) 87.78%
   );
 }
+.how_to_get_job_title {
+  color: #fff;
+  font-size: 1.375rem;
+  font-weight: 600;
+}
+.how_to_get_job_subtitle {
+  /* style={{ color: "#FFF", fontSize: "1.125rem", fontWeight: "600" }} */
+  color: #fff;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.how_to_get_job_img {
+  display: none;
+}
+.find_work_section_content_wrapper {
+  padding: 10px 0;
+}
 .find-work-content {
+  display: flex;
   color: #fff;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
+  padding-top: 15px;
 }
+.find-work-content i {
+  margin: 20px 10px 0 0;
+}
+.find_work_section_content_wrapper {
+  padding-left: 20px;
+}
+
 .find_opportunity_btn {
+  position: absolute;
+  width: 90%;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: var(--font-normal);
-  display: block;
-  margin: 3rem var(--mb-side-space);
 }
+
+/* <-----------Suitable Service Section--------->  */
+
 .suitable_service_section {
   height: 390px;
   position: relative;
+  /* width: 100%; */
+  margin: 0;
+  /* margin: 0 !important; */
 }
+.suitable_service_wrapper {
+  height: inherit;
+  width: inherit;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: start;
+}
+.suitable_service_title_break::before {
+  content: "";
+}
+
 .suitable_service_img {
   position: absolute;
   height: 390px;
@@ -230,13 +341,22 @@
   color: #fff;
   font-size: 1.5rem;
   font-weight: 600;
-  padding: 20px 30px;
+  padding: 60px 30px;
+}
+.suitable_service--btn {
+  position: absolute;
+  width: 90%;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
 }
 
 /* Our client Saying section */
 .our_client_saying_section {
   position: relative;
-  height: 540px;
+  /* height: 540px; */
+  height: 500px;
 }
 .client_saying_background {
   position: absolute;
@@ -304,56 +424,394 @@
   align-items: center;
 }
 
-/* Footer & please move to index.css after finishing footer */
-.footer {
-  padding: 0 250px;
-  height: 710px;
+@media screen and (min-width: 450px) {
+  .suitable_service_title {
+    padding: 50px 70px 0 50px;
+  }
+  .suitable_service--btn {
+    bottom: 50px;
+  }
+  .suitable_service_title_break::before {
+    content: "";
+  }
 }
-.footer-wrapper {
-  /* margin: 1rem 5rem; */
-  margin: 1rem auto;
-}
-.site_footer {
-  border-top: 1px solid #e4e5e7;
-  position: relative;
-}
-.footer__row {
-  display: flex;
-  /* flex-wrap: wrap; */
-  gap: 1em;
-  /* max-width: 1200px; */
-}
-.footer__col {
-  flex: 0 1 20em;
-  width: 150px;
-  height: 150px;
-  background-color: #000;
-}
-.footer__row > * {
-  flex-basis: 100%;
-}
-.footer__col:nth-child(4) {
-}
-
-@media only screen and (min-width: 600px) {
-  .column img {
-    width: 270px;
-    height: 224px;
-    object-fit: cover;
+@media screen and (min-width: 500px) {
+  /* Suitable Service Title line break */
+  .suitable_service_title_break {
+    content: "\a";
+    white-space: pre;
   }
 }
 
-@media only screen and (max-width: 400px) {
-  .hire_pro_section {
-    padding: 0 10px;
+/*  <---------Responsive for small table------->*/
+@media screen and (min-width: 600px) {
+  .section_gap {
+    margin: 90px 0 40px 0;
   }
-  .card {
-    /* display: none; */
-    /* height: 150px;
-    width: 150px; */
+
+  .hero-section--heading {
+    text-align: left;
+    padding: 100px 0 0 0;
+    font-size: 1.75rem;
   }
-  .pro_section_card_image img {
-    /* height: 150px;
-    width: 150px; */
+  .hero-section--sub_heading {
+    text-align: left;
+    padding: 20px 0 0 0;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .hero-section--btn {
+    width: 200px;
+    display: inline-block;
+    margin: -20px 20px 0 0;
+    /* padding: 0.75rem 3rem; */
+    height: 48px;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .hero-section {
+    background: url("../components/images/HERO52.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+  }
+
+  /* How we work section small table */
+  .how_we_work_section {
+    height: 680px;
+  }
+
+  .work_section_title {
+    display: none;
+  }
+  .work_section_title_table {
+    display: block;
+    text-align: center;
+    font-size: 1.375rem;
+    font-weight: 600;
+    padding-top: 50px;
+  }
+  .work_section_video_wrapper img {
+    height: 280px;
+  }
+  .work_section_content {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .work_section_helper:nth-child(2) {
+    padding: 1.6rem 0 0 0;
+    margin: 0;
+  }
+  /* How to get a job/service section small tablet */
+  .how_to_get_job_section {
+    height: 500px;
+  }
+  .find_opportunity_btn {
+    margin: 70px 0;
+    /* display: block; */
+    position: relative;
+  }
+  /* Suitable service provider section */
+  .suitable_service_title_break {
+    content: "\a";
+    white-space: pre;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  /* How we work section Tablet */
+
+  .how_we_work_section {
+    height: 460px;
+  }
+  .how_we_work_row {
+    display: flex;
+    height: 460px;
+  }
+  .work_section_title {
+    display: none;
+  }
+  .work_section_helper {
+    padding: 1.6rem 0;
+  }
+  .work_section_title_table {
+    display: block;
+    text-align: center;
+    font-size: 1.375rem;
+    font-weight: 600;
+    padding-top: 50px;
+  }
+  .work_section_content {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .work_section_video_wrapper {
+    margin: 0;
+    width: 100%;
+  }
+  .work_section_video_wrapper img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .work_section_col {
+    height: auto;
+    flex-basis: 50%;
+    margin: 50px 10px;
+  }
+
+  .work_section_helper {
+    padding: 1rem 0 0 0;
+    /* margin: 0;
+    padding: 0; */
+  }
+
+  /* <---------How to get a job section Tablet-----------> */
+
+  .how_to_get_job_section {
+    height: 610px;
+  }
+
+  .how_to_get_job_section {
+    display: flex;
+  }
+  .how_to_get_job_col {
+    margin-left: 0 !important;
+    flex-basis: 50%;
+  }
+  .how_to_get_job_img {
+    height: 100%;
+    display: block;
+    background: url("../components/images/photo-1534665482403-a909d0d97c67.jpg");
+    z-index: 50;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .how_to_get_job_title {
+    font-family: "Work Sans", "sans-serif";
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+  .how_to_get_job_subtitle {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  .find-work-content {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .work_section_helper:nth-child(1) {
+    /* padding-top: 30px; */
+  }
+  /* .work_section_helper {
+    padding: 0;
+    margin: 0;
+  } */
+  .get_job--col2 {
+    padding: 0 20px 0 20px;
+  }
+
+  /* Suitable service provider section */
+  .suitable_service_title_break {
+    content: "\a";
+    white-space: pre;
+  }
+
+  /* <---------What our client saying about us section--------> */
+  .client_saying_card {
+    flex-basis: 55%;
+  }
+  .client_saying_background {
+    top: 100px;
+  }
+  .client_saying_card_content {
+    padding: 0 20px;
+    bottom: 80px;
+  }
+}
+
+/* /* <--------------Hero Section Responsive PC------------------>/ */
+
+@media only screen and (min-width: 1200px) {
+  .section_gap {
+    margin: 130px 0 45px 0;
+  }
+
+  .hero-section--heading {
+    text-align: left;
+    padding: 100px 0 0 0;
+    font-size: 3rem;
+  }
+  .hero-section--sub_heading {
+    text-align: left;
+    padding: 20px 0 0 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .hero-section--btn {
+    width: 232px;
+    display: inline-block;
+    margin: 0 20px 0 0;
+
+    height: 62px;
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  .hero-section {
+    background: url("../components/images/HERO52.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 590px;
+  }
+  .hero_section_titles {
+    font-size: 2.25rem;
+  }
+
+  /* How we work section */
+  .how_we_work_section {
+    height: 492px;
+  }
+  .how_we_work_row {
+    display: flex;
+    height: 492px;
+  }
+  .work_section_title {
+    margin: 0;
+    padding: 0;
+    font-size: 1.625rem;
+    font-weight: 700;
+    text-align: left;
+    display: block;
+  }
+  .work_section_title_table {
+    display: none;
+  }
+  .work_section_content {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+
+  .work_section_video_wrapper {
+    margin: 0;
+    width: 100%;
+  }
+  .work_section_video_wrapper img {
+    width: 100%;
+    height: 100%;
+  }
+  .find_opportunity_btn {
+    margin: 80px 0;
+    /* display: block; */
+    position: relative;
+  }
+
+  .work_section_col {
+    height: auto;
+    flex-basis: 50%;
+    margin: 50px 10px;
+  }
+
+  .work_section_helper:nth-child(2) {
+    padding: 3rem 0 0 0;
+  }
+
+  /* <---------How to get a job/service section PC-----------> */
+  .how_to_get_job_section {
+    height: 650px;
+  }
+  .how_to_get_job_section {
+    display: flex;
+  }
+  .how_to_get_job_col {
+    flex-basis: 50%;
+  }
+  .how_to_get_job_img {
+    height: 100%;
+    display: block;
+    background: url("../components/images/photo-1534665482403-a909d0d97c67.jpg");
+    z-index: 50;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .how_to_get_job_title {
+    font-family: "Work Sans", "sans-serif";
+    font-size: 3.25rem;
+    font-weight: 700;
+  }
+  .how_to_get_job_subtitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  .find-work-content {
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  .work_section_helper:nth-child(1) {
+    padding-top: 30px;
+  }
+  /* .work_section_helper {
+    padding: 0;
+    margin: 0;
+  } */
+  .get_job--col2 {
+    padding: 0 20px 0 20px;
+  }
+  /* <-----------Suitable Service Section Pc------------> */
+  .suitable_service--btn {
+    width: 300px;
+    /* position: relative; */
+    display: block;
+    /* flex-basis: 100%; */
+    padding: 1rem 2rem;
+    left: 200px;
+  }
+  .suitable_service_title_break {
+    content: "\a";
+    white-space: pre;
+  }
+
+  /* <---------What our client saying about us section--------> */
+  .our_client_saying_section {
+    height: 340px;
+  }
+  .client_saying_card {
+    flex-basis: 80%;
+    height: 340px;
+  }
+  .client_saying_background {
+    height: 290px;
+    top: 30px;
+  }
+  .client_saying_img {
+    height: 260px;
+    width: 260px;
+  }
+  .client_saying_card_content {
+    padding: 0 36px 0 345px;
+    bottom: 32%;
+  }
+  .client_saying_card__title {
+    /* top: 15%;
+    left: 66%; */
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    font-size: 1.75rem;
+  }
+  .client_saying_card__rating {
+    left: 50%;
+    top: 46%;
+    transform: translate(-50%, -50%);
+  }
+  .client_saying_img {
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
