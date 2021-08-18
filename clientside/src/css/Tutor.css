@@ -1,0 +1,45 @@
+.individual_tutor {
+  position: relative;
+  height: 370px;
+  border: 1px solid #dbdbdb;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0);
+  margin: 10px;
+}
+.individual_tutor_image {
+  height: 140px;
+  width: 135px;
+}
+.individual_tutor_image img {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 135px;
+  width: 135px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.individual_tutor_title {
+  font-weight: 500;
+  text-align: center;
+}
+.individual_tutor_city {
+  text-align: center;
+}
+.individual_tutor_prefer_medium {
+  padding: 10px 0;
+  text-align: center;
+}
+.individual_tutor_ratings{
+  padding: 8px 60px;
+}
+.individual_tutor_ratings i {
+  text-align: center;
+  color: rgba(252, 252, 5, 0.685);
+  font-size: 1rem;
+}
+.individual_tutor_salary{
+  text-align: center;
+  color: green;
+  font-weight: 500;
+}

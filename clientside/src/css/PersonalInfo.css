@@ -1,0 +1,171 @@
+.PersonalInfo-parent-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.PersonalInfo-child-container {
+  width: 60%;
+}
+
+.PersonalInfo-logo {
+  height: 42px;
+  width: 336px;
+  font-size: 28px;
+  font-family: "Poppins";
+  font-weight: 700;
+  color: #000000;
+}
+
+.PersonalInfo-description {
+  padding: 16px 450px 0 0;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.PersonalInfo-form {
+  width: 100%;
+}
+
+.PersonalInfo-input-section1 {
+  width: 100%;
+  margin-bottom: 97px;
+
+  display: flex;
+}
+/* common css for all */
+.PersonalInfo-form-label {
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.PersonalInfo-form-label-container {
+  width: 211px;
+}
+.PersonalInfo-form-input-container {
+  flex-grow: 100;
+}
+
+/*/////////////*/
+.PersonalInfo-first-name,
+.PersonalInfo-last-name {
+  height: 38px;
+  width: 240px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  border: 1px solid var(--clr-light-border);
+  font-weight: 400;
+}
+.PersonalInfo-first-name {
+  margin-right: 15px;
+}
+
+.PersonalInfo-input-section2 {
+  width: 100%;
+  display: flex;
+  margin-bottom: 97px;
+}
+
+.PersonalInfo-radio {
+  /* width: 15px;
+  height: 15px; */
+  border: 1px solid var(--clr-light-border);
+  margin: 0 10px 0 0;
+}
+
+.PersonalInfo-form-label-male,
+.PersonalInfo-form-label-female {
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.PersonalInfo-form-label-male {
+  margin-right: 100px;
+}
+
+.PersonalInfo-input-section3 {
+  width: 100%;
+  display: flex;
+  margin-bottom: 97px;
+}
+
+.PersonalInfo-phone {
+ height: 38px;
+  width: 240px;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  border: 1px solid var(--clr-light-border);
+  font-weight: 400;
+}
+.PersonalInfo-input-section4 {
+  width: 100%;
+  display: flex;
+  margin-bottom: 97px;
+}
+.PersonalInfo-input-pic {
+  display: flex;
+  flex-direction: column;
+}
+
+.PersonalInfo-profile-pic {
+  width: 155px;
+  height: 155px;
+  margin-bottom: 10px;
+}
+
+.PersonalInfo-input-pic {
+  color: #000000;
+}
+.PersonalInfo-input-section5 {
+  width: 100%;
+  display: flex;
+}
+
+.PersonalInfo-personal-description {
+  width: 520px;
+  height: 189px;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  border: 1px solid var(--clr-light-border);
+  padding-top: 15px;
+  font-weight: 400;
+  font-family: "Poppins";
+}
+
+.PersonalInfo-personal-minimum {
+  width: 520px;
+
+  display: flex;
+  justify-content: flex-end;
+  font-weight: 400;
+  font-size: 14px;
+  font-family: "Poppins";
+  color: #000000;
+}
+.PersonalInfo-continue-button {
+  width: 720px;
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.PersonalInfo-continue-button > button {
+  width: 167px;
+  height: 44px;
+  background: #5d5fef;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 11px;
+  font-weight: 600;
+}

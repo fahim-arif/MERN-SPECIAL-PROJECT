@@ -1,0 +1,282 @@
+.BasicProfessionalInfo-parent-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.BasicProfessionalInfo-child-container {
+  width: 60%;
+}
+
+.BasicProfessionalInfo-logo {
+  font-size: 28px;
+
+  font-weight: 700;
+  color: #000000;
+}
+
+.BasicProfessionalInfo-description {
+  padding: 0 450px 0 0;
+  margin-top: 16px;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.BasicProfessionalInfo-form {
+  width: 100%;
+}
+
+.BasicProfessionalInfo-input-section1 {
+  width: 100%;
+  margin-bottom: 90px;
+
+  display: flex;
+}
+/* common css for all */
+.BasicProfessionalInfo-form-label-container {
+  width: 211px;
+}
+
+.BasicProfessionalInfo-form-label {
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+}
+
+.BasicProfessionalInfo-form-input-container {
+  flex-grow: 100;
+}
+
+/*/////////////*/
+.BasicProfessionalInfo-mandatory {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+
+  font-size: 400;
+  font-size: 14px;
+  margin-bottom: 69px;
+  padding-right: 150px;
+  box-sizing: border-box;
+}
+
+.BasicProfessionalInfo-profession {
+  height: 43px;
+  width: 396px;
+  font-size: 16px;
+  font-weight: 400;
+  padding-left: 20px;
+  border: 1px solid var(--clr-light-border);
+  border-radius: 4px;
+}
+
+.BasicProfessionalInfo-input-section2 {
+  width: 100%;
+  margin-bottom: 90px;
+
+  display: flex;
+}
+
+.BasicProfessionalInfo-skills,
+.BasicProfessionalInfo-experience {
+  width: 191px;
+  height: 43px;
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding-left: 20px;
+  border: 1px solid var(--clr-light-border);
+  border-radius: 4px;
+}
+.BasicProfessionalInfo-experience {
+  margin-left: 11px;
+  margin-right: 12px;
+}
+
+.BasicProfessionalInfo-add-btn {
+  width: 73px;
+  height: 43px;
+  background: var(--clr-primary);
+  color: #fff;
+  border: none;
+  border-radius: 11px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.BasicProfessionalInfo-input-section3 {
+  width: 100%;
+  margin-bottom: 90px;
+
+  display: flex;
+}
+
+.BasicProfessionalInfo-input-section3
+  > .BasicProfessionalInfo-form-input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.BasicProfessionalInfo-School {
+  width: 480px;
+  height: 43px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding-left: 20px;
+  border: 1px solid var(--clr-light-border);
+  margin-bottom: 18px;
+}
+
+.BasicProfessionalInfo-group-result {
+  margin-bottom: 18px;
+}
+
+.BasicProfessionalInfo-group,
+.BasicProfessionalInfo-result {
+  width: 235px;
+  height: 43px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding-left: 20px;
+  border: 1px solid var(--clr-light-border);
+}
+.BasicProfessionalInfo-result {
+  margin-left: 10px;
+}
+.BasicProfessionalInfo-title-year {
+  margin-bottom: 18px;
+}
+
+.BasicProfessionalInfo-title {
+  width: 383px;
+  height: 43px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding-left: 20px;
+  border: 1px solid var(--clr-light-border);
+}
+.BasicProfessionalInfo-year {
+  width: 90px;
+  height: 43px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding-left: 20px;
+  border: 1px solid var(--clr-light-border);
+  margin-left: 7px;
+}
+.BasicProfessionalInfo-add-btn-container {
+  width: 480px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.BasicProfessionalInfo-input-section4 {
+  width: 100%;
+  margin-bottom: 90px;
+
+  display: flex;
+}
+
+.BasicProfessionalInfo-input-section4
+  > .BasicProfessionalInfo-form-input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.BasicProfessionalInfo-certificate-award,
+.BasicProfessionalInfo-certificate-from {
+  width: 480px;
+  height: 43px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding-left: 20px;
+  border: 1px solid var(--clr-light-border);
+  margin-bottom: 10px;
+}
+
+.BasicProfessionalInfo-certificate-year-add-btn {
+  display: flex;
+  justify-content: space-between;
+  width: 480px;
+}
+
+.BasicProfessionalInfo-certificate-year {
+  width: 214px;
+  height: 43px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding-left: 20px;
+  border: 1px solid var(--clr-light-border);
+  margin-bottom: 10px;
+}
+
+.BasicProfessionalInfo-input-section-5-to-11 {
+  width: 100%;
+  margin-bottom: 90px;
+
+  display: flex;
+}
+
+.BasicProfessionalInfo-input-section-5-to-11
+  > .BasicProfessionalInfo-form-input-container
+  > input {
+  width: 396px;
+  height: 43px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding-left: 20px;
+  border: 1px solid var(--clr-light-border);
+}
+
+.BasicProfessionalInfo-input-section12 {
+  width: 100%;
+
+  display: flex;
+}
+
+.BasicProfessionalItnfo-distric,
+.BasicProfessionalInfo-areas {
+  width: 217px;
+  height: 43px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  box-sizing: border-box;
+  padding-left: 20px;
+  border: 1px solid var(--clr-light-border);
+}
+
+.BasicProfessionalInfo-areas {
+  margin-left: 12px;
+}
+.BasicProfessionalInfo-continue-button {
+  width: 650px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.BasicProfessionalInfo-continue-button > button {
+  width: 167px;
+  height: 44px;
+  background: #5d5fef;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 11px;
+  font-weight: 600;
+}

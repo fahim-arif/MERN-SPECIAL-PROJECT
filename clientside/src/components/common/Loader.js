@@ -2,7 +2,7 @@ import React from "react";
 import { Spinner } from "react-bootstrap";
 const Loader = () => {
   return (
-    <Spinner
+    <Spinner className='loading_spinner'
       animation='border'
       role='status'
       style={{

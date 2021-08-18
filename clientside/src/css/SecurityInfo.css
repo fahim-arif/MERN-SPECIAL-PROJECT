@@ -1,0 +1,97 @@
+.SecurityInfo-parent-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.SecurityInfo-child-container {
+  width: 60%;
+}
+
+.SecurityInfo-logo {
+  height: 42px;
+  width: 336px;
+  font-size: 28px;
+  font-family: "Poppins";
+  font-weight: 700;
+  color: #000000;
+}
+
+.SecurityInfo-description {
+  padding: 0 450px 0 0;
+  margin-top: 16px;
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.SecurityInfo-form {
+  width: 100%;
+}
+
+.SecurityInfo-input-section1,
+.SecurityInfo-input-section2 {
+  width: 100%;
+  margin-bottom: 90px;
+
+  display: flex;
+}
+
+.SecurityInfo-mandatory {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  font-family: "Poppins";
+  font-size: 400;
+  font-size: 14px;
+  margin-bottom: 69px;
+  padding-right: 150px;
+  box-sizing: border-box;
+}
+.SecurityInfo-add-btn {
+  height: 43px;
+  background-color: var(--clr-primary);
+  color: #fff;
+  border-radius: 11px;
+  border: none;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 346px;
+  padding: 0 40px;
+}
+
+/* common css for all */
+.SecurityInfo-form-label-container {
+  width: 211px;
+}
+
+.SecurityInfo-form-label {
+  font-family: "Poppins";
+  font-size: 18px;
+  font-weight: 400;
+  color: #000000;
+}
+.SecurityInfo-form-input-container {
+  flex-grow: 100;
+}
+
+/*/////////////*/
+
+.Security-continue-button {
+  width: 650px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Security-continue-button > button {
+  width: 167px;
+  height: 44px;
+  background: #5d5fef;
+  font-size: 16px;
+  color: #fff;
+  border-radius: 11px;
+  font-weight: 600;
+}

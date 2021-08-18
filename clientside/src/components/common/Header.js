@@ -11,10 +11,10 @@ const Header = () => {
   const dispatch = useDispatch();
   const sideMargin = useSelector((state) => state.sideMargin);
   const { margin: space } = sideMargin;
-  console.log(space);
+  const userLogin = useSelector((state) => state.userLogin);
+  const { userInfo } = userLogin;
 
-  // example
-
+  // For getting screen width and rerenders when screen width is changed //
   function debounce(fn, ms) {
     let timer;
 
@@ -46,8 +46,9 @@ const Header = () => {
       window.removeEventListener("resize", debouncedHandleResize);
     };
   });
-  // example end
+  // Function Ends
 
+  // Mobile Screen Hambergur menu Button Click
   const showSideBar = () => {
     setClicked(!clicked);
   };
@@ -71,66 +72,82 @@ const Header = () => {
   );
 
   return (
-    <header style={{ margin: `0 ${space}px` }}>
-      <div className={clicked ? "opacity" : ""} onClick={showSideBar}></div>
-      <nav className='nav'>
-        <div className={clicked ? "nav-menu active" : "nav-menu"}>
-          <ul className='nav__list'>
-            <div className='header_col hambarger_and_logo'>
-              <div className='menu-icon' onClick={showSideBar}>
-                <img
-                  src='images/bars.svg'
-                  alt='Menu bars'
-                  className='menu_bars'
-                />
+    <header>
+      <div style={{ margin: `0 ${space}px` }} className='header_wrapper'>
+        <div className={clicked ? "opacity" : ""} onClick={showSideBar}></div>
+        <nav className='nav'>
+          <div className={clicked ? "nav-menu active" : "nav-menu"}>
+            <ul className='nav__list'>
+              <div className='header_col hambarger_and_logo'>
+                <div className='menu-icon' onClick={showSideBar}>
+                  <img
+                    src='images/bars.svg'
+                    alt='Menu bars'
+                    className='menu_bars'
+                  />
+                </div>
+
+                <Link to='/'>
+                  <img
+                    className='navbar-logo'
+                    src='images/logo.svg'
+                    alt='logo'
+                  />
+                </Link>
               </div>
+              <div className='header_col header_links'>
+                <li className='nav__list-item nav__list-item--services'>
+                  <Link to='/service'>Service</Link>
+                </li>
+                <li className='nav__list-item nav__list-item--about'>
+                  <Link to='/about'>About</Link>
+                </li>
+                <li className='nav__list-item nav__list-item--contact'>
+                  <Link to='/about'>Contact</Link>
+                </li>
+                {/* <div className='header_user_profile_menu'> */}
+                {userInfo ? (
+                  <div className='header_user_profile_menu'>
+                    Welcome {userInfo.username}
+                  </div>
+                ) : (
+                  <>
+                    <li className='nav__list-item nav__list-item--sign_in'>
+                      <Link to='/sign-in'>Sign In</Link>
+                    </li>
+                    <li className='nav__list-item nav_list--join'>
+                      <Link to='/login'>Join</Link>
+                    </li>
+                  </>
+                )}
+                {/* </div> */}
+              </div>
+            </ul>
 
-              <Link to='/'>
-                <img className='navbar-logo' src='images/logo.svg' alt='logo' />
-              </Link>
+            {/* Sidebar section */}
+
+            <div className={clicked ? "side-bar active" : "side-bar"}>
+              <div className='side-bar-menu' onClick={showSideBar}>
+                <Link className='nav-link side-services' to='/services'>
+                  <i className='fas fa-briefcase'></i> Services
+                </Link>
+                <Link className='nav-link side-contact' to='/about'>
+                  Contact
+                </Link>
+                <Link className='nav-link side-sign-in' to='/contact'>
+                  Sign IN
+                </Link>
+
+                <Link className='nav-link side-join' to='/contact'>
+                  Join
+                </Link>
+              </div>
             </div>
-            <div className='header_col header_links'>
-              <li className='nav__list-item nav__list-item--services'>
-                <Link to='/service'>Service</Link>
-              </li>
-              <li className='nav__list-item nav__list-item--about'>
-                <Link to='/about'>About</Link>
-              </li>
-              <li className='nav__list-item nav__list-item--contact'>
-                <Link to='/about'>Contact</Link>
-              </li>
-              <li className='nav__list-item nav__list-item--sign_in'>
-                <Link to='/sign-in'>Sign In</Link>
-              </li>
-              <li className='nav__list-item nav_list--join'>
-                <Link to='/login'>Join</Link>
-              </li>
-            </div>
-          </ul>
 
-          {/* Sidebar section */}
-
-          <div className={clicked ? "side-bar active" : "side-bar"}>
-            <div className='side-bar-menu' onClick={showSideBar}>
-              <Link className='nav-link side-services' to='/services'>
-                <i className='fas fa-briefcase'></i> Services
-              </Link>
-              <Link className='nav-link side-contact' to='/about'>
-                Contact
-              </Link>
-              <Link className='nav-link side-sign-in' to='/contact'>
-                Sign IN
-              </Link>
-
-              <Link className='nav-link side-join' to='/contact'>
-                Join
-              </Link>
-            </div>
+            {/* navigation bar section */}
           </div>
-
-          {/* navigation bar section */}
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
   );
 };

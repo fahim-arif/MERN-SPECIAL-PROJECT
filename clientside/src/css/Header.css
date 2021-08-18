@@ -11,9 +11,13 @@
   text-decoration: none;
 }
 header {
-
   height: 68px;
+  border-bottom: 1px solid #e4e5e7;
 }
+.header_wrapper {
+  height: inherit;
+}
+
 .nav-menu {
   height: inherit;
   width: inherit;
@@ -246,9 +250,12 @@ header {
   .nav__list {
     /* justify-content: center; */
   }
+  .header_user_profile_menu {
+    display: none;
+  }
 }
-@media screen and (max-width:375px) {
-  .navbar-logo { 
+@media screen and (max-width: 375px) {
+  .navbar-logo {
     position: relative;
     top: 0;
     left: 0;

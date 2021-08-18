@@ -13,7 +13,6 @@ const HomePageScreen = () => {
   const sideMargin = useSelector((state) => state.sideMargin);
   const { margin: space } = sideMargin;
 
-  console.log(space)
   useEffect(() => {
     console.log('effect')
     if (space > 20) {
@@ -296,11 +295,13 @@ const HomePageScreen = () => {
         <div className='client_saying_background'></div>
         <div className='client_saying_card_wrapper'>
           <div className='client_saying_card'>
-            <img
-              className='client_saying_img'
-              src='images/photo-1595502124338-950db27ea1c7.jpg'
-              alt='what our client saying image'
-            />
+            <div className='client_saying_img_wrapper'>
+              <img
+                className='client_saying_img'
+                src='images/photo-1595502124338-950db27ea1c7.jpg'
+                alt='what our client saying image'
+              />
+            </div>
             <div className='client_saying_card_content_wrapper'>
               <div className='client_saying_card__title'>
                 Fahim Arif, Co-Founder of Shobcity
@@ -320,7 +321,6 @@ const HomePageScreen = () => {
           </div>
         </div>
       </div>
-      <hr />
     </>
   );
 };

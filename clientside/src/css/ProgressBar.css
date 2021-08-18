@@ -1,0 +1,76 @@
+.ProgressBar-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.ProgressBar-progress {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 30px;
+}
+
+.ProgressBar-progress-number {
+  display: none;
+  width: 28px;
+  height: 26px;
+  background: #fff;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #c4c4c4;
+  font-family: "Poppins";
+  border: 2px solid #cfcfcf;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.ProgressBar-progress-active  .ProgressBar-progress-number {
+  border: none;
+  color: #fff;
+  background: #5d5fef;
+}
+
+/* background: #5d5fef; */
+/* color:#C4C4C4; */
+
+.ProgressBar-progress-text {
+  color: #c4c4c4;
+  margin: 0 0 0 13px;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.ProgressBar-progress-active  .ProgressBar-progress-text {
+  color: #5d5fef;
+}
+
+.ProgressBar-progress-arrow {
+  margin: 0 0 0 13px;
+  color: #c4c4c4;
+  font-family: "Poppins";
+}
+
+.ProgressBar-progress-active  .ProgressBar-progress-arrow {
+  color: #5d5fef;
+}
+
+.ProgressBar-completion-ratio {
+}
+
+.ProgressBar-completion-ratio-text {
+  font-family: "Poppins";
+  color: #c4c4c4;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.ProgressBar-progress-completion-ratio-progress {
+  width: 161px;
+  height: 8px;
+  background: darkblue;
+}

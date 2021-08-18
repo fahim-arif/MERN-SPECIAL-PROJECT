@@ -7,6 +7,7 @@
   --clr-primary: #5d5fef;
   --clr-dark: #000000;
   --clr-light: #f92c8b;
+  --clr-light-border: #dbdbdb;
   --fw-normal: 400;
   --fw-medium: 500;
   --fw-bold: 700;
@@ -52,14 +53,38 @@ code {
   border: solid 4px #000000;
   color: #000000;
   border-radius: 11px;
+  font-size: 0.875rem;
 }
-
+.button-purple-transparent {
+  border: solid var(--clr-primary);
+  font-size: 0.875rem;
+  border-radius: 11px;
+  text-align: center;
+  background-color: #fff;
+  color: var(--clr-primary);
+}
+.circle-button {
+  background-color: #fff;
+  height: 48px;
+  width: 48px;
+  border-radius: 50%;
+  /* border: 1px solid #dbdbdb; */
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 50%);
+}
 .btn {
-  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4);
+  font-size: 0.875rem;
+  text-transform: none;
+  /* box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.4); */
   transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1),
     box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
     transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn:hover {
   box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, 0.4);
+}
+.red__color {
+  color: red;
+}
+.margin_bottom{
+  margin-bottom: 120px;
 }

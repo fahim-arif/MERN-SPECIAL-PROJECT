@@ -1,5 +1,6 @@
 import dotenv from "dotenv";
 import express from "express";
+import colors from "colors";
 import userRoutes from "./routes/userRoutes.js";
 import connectDB from "./config/db.js";
 import { tutors } from "./tution.js";
@@ -7,16 +8,12 @@ import { router } from "./routes/tutionRoutes.js";
 
 const app = express();
 
-connectDB();
 dotenv.config();
+connectDB();
 
 app.use(express.json());
 
 app.use("/api/tutors", router);
-
-// app.use("/", (req, res, next) => {
-//   res.send("Hello world");
-// });
 
 app.get("/api/tutors/:id", (req, res) => {
   const tutor = tutors.find((p) => p._id === req.params.id);

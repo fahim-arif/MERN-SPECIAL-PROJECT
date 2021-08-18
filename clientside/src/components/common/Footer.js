@@ -6,6 +6,7 @@ import "../../css/Footer.css";
 const Footer = () => {
   return (
     <>
+    
       <footer className='footer'>
         <div className='footer-wrapper'>
           <div className='site_footer'>

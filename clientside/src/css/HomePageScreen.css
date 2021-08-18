@@ -371,6 +371,7 @@
   width: 285px;
   height: 500px;
 }
+/* dddddddddddddddddddddddddd */
 .client_saying_img {
   position: absolute;
   width: 180px;
@@ -518,6 +519,10 @@
     content: "\a";
     white-space: pre;
   }
+  /* Our client saying section */
+  .our_client_saying_section {
+    margin: 0 0 100px 0;
+  }
 }
 
 @media screen and (min-width: 800px) {
@@ -622,6 +627,9 @@
   }
 
   /* <---------What our client saying about us section--------> */
+  .our_client_saying_section {
+    margin: 0 0 100px 0;
+  }
   .client_saying_card {
     flex-basis: 55%;
   }
@@ -779,6 +787,7 @@
   /* <---------What our client saying about us section--------> */
   .our_client_saying_section {
     height: 340px;
+    margin-bottom: 120px;
   }
   .client_saying_card {
     flex-basis: 80%;
@@ -793,25 +802,41 @@
     width: 260px;
   }
   .client_saying_card_content {
-    padding: 0 36px 0 345px;
-    bottom: 32%;
+    /* padding: 0 36px 0 345px; */
+    bottom: 35%;
   }
   .client_saying_card__title {
     /* top: 15%;
     left: 66%; */
-    left: 50%;
-    top: 25%;
-    transform: translate(-50%, -50%);
+    text-align: center;
+    left: 0;
+    top: 16%;
+    /* top: 15%; */
+    transform: translate(0, 0);
+    /* transform: translate(-50%, -50%); */
     font-size: 1.75rem;
   }
   .client_saying_card__rating {
     left: 50%;
-    top: 46%;
-    transform: translate(-50%, -50%);
+    top: 37%;
+    transform: translate(-50%, 0);
   }
   .client_saying_img {
     left: 50px;
     top: 50%;
     transform: translateY(-50%);
+  }
+  .client_saying_card {
+    display: flex;
+  }
+  .client_saying_img_wrapper {
+    height: 340px;
+    width: 350px;
+  }
+  .client_saying_card_content_wrapper {
+    flex-basis: 76%;
+    height: inherit;
+    width: inherit;
+    position: relative;
   }
 }

@@ -3,19 +3,28 @@ import thunk from "redux-thunk";
 import { composeWithDevTools } from "redux-devtools-extension";
 
 import { marginReducer } from "./reducers/marginReducer";
-import { userRegisterReducer } from "./reducers/userReducers";
+import { userRegisterReducer, userLoginReducer } from "./reducers/userReducers";
 import { tutorListReducer } from "./reducers/tutorReducer";
 
 const reducer = combineReducers({
+  userLogin: userLoginReducer,
   userRegister: userRegisterReducer,
   tutorList: tutorListReducer,
   sideMargin: marginReducer,
 });
 
+const userInfoFromStorage = localStorage.getItem("userInfo")
+  ? JSON.parse(localStorage.getItem("userInfo"))
+  : null;
+
+const initialState = {
+  userLogin: { userInfo: userInfoFromStorage },
+};
 const middleware = [thunk];
 
 const store = createStore(
   reducer,
+  initialState,
   composeWithDevTools(applyMiddleware(...middleware))
 );
 

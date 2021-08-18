@@ -1,0 +1,194 @@
+.tuition_hero_section_wrapper {
+  display: flex;
+  margin: 10px 0;
+  height: 302px;
+}
+.tuition_hero_section_wrapper a {
+  text-decoration: none;
+}
+.tuition_hero_section_post_tuition {
+  flex-basis: 23.6666%;
+  position: relative;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0);
+  padding: 50px 10px 20px 10px;
+  background-color: #fafafa;
+}
+
+.post_tuiton_title {
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.post_tuiton_content {
+  padding: 30px 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.post_tuiton_button {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border: solid var(--clr-primary);
+  border-radius: 11px;
+  height: 44px;
+  width: 185px;
+  text-align: center;
+  padding: 8px 0;
+}
+.post_tuiton_button a {
+  color: var(--clr-primary);
+  font-weight: 500;
+}
+
+.tuition_hero_section_available_tuition {
+  position: relative;
+  flex-basis: 76.33333%;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0);
+  /* padding: 50px 10px 20px 10px; */
+  width: 100%;
+  height: 100%;
+  margin-left: 20px;
+}
+.tuition_hero_available_tuition_background {
+  position: absolute;
+  background: url("../components//images/marketing-bg6.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: inherit;
+  height: inherit;
+  z-index: -2;
+  opacity: 0.8;
+}
+.tuition_hero_available_tuition_background::after {
+  content: "";
+  display: block;
+  background-color: black;
+  z-index: -1;
+  height: inherit;
+  width: inherit;
+  opacity: 0.05;
+}
+.left__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  font-weight: 400;
+  left: 150px;
+  padding: 0 2px 0 0;
+}
+.right__button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 0 0 0 2px;
+  right: 150px;
+}
+.view_all_tuition_button {
+  position: absolute;
+  right: 0;
+  background-color: #fee407;
+  padding: 10px 50px;
+  font-weight: 500;
+}
+.view_all_tuition_button a:hover {
+  text-decoration: underline;
+}
+
+.available_tuition__title {
+  padding: 40px 0 20px 0;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+}
+.available_tuition_carousel {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.available_tuition_carousel p {
+  margin: 5px;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.available_tuition__details_button {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--clr-primary);
+  padding: 11px 45px;
+  border-radius: 11px;
+}
+.available_tuition__details_button a {
+  color: #fff;
+}
+
+/* <-----------search tutor section--------------> */
+.search_for_tutors_title {
+  font-family: "Work sans", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  padding: 100px 0 28px 0;
+}
+
+.search_for_tutors_section {
+  height: 185px;
+  border: solid #dbdbdb 1px;
+  border-radius: 10px;
+}
+.search_for_tutors_search_box {
+  padding: 20px 0px 0px 150px;
+  position: relative;
+  height: inherit;
+}
+/* .filter_tutor_form{
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+} */
+.tutors_search__box {
+  background-color: #fff;
+  /* padding: 10px 5px 10px 5px; */
+  padding: 10px 10px 10px 20px;
+  margin: 0 15px;
+  border: solid #dbdbdb 1px;
+  border-radius: 10px;
+}
+.tutors_filter_search_button {
+  width: 115px;
+  margin-left: 15px;
+  padding: 0.7rem 4rem;
+}
+.more_filter_button {
+  text-transform: none;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.more_filter_button:hover {
+  color: var(--clr-primary);
+}
+/* <---------------Our toutor List Section-----------------> */
+.our_tutor_list_title {
+  font-family: "Work sans", sans-serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  padding: 80px 0 28px 0;
+}
+.our_tutor_list_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.our_tutor_list_col {
+  flex-basis: 25%;
+  height: 405px;
+  margin: 10px 0;
+}
