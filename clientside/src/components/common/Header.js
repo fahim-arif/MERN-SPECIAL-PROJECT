@@ -105,11 +105,14 @@ const Header = () => {
                 <li className='nav__list-item nav__list-item--contact'>
                   <Link to='/contact-us'>Contact</Link>
                 </li>
+                <Link></Link>
                 {/* <div className='header_user_profile_menu'> */}
                 {userInfo ? (
-                  <div className='header_user_profile_menu'>
-                    Welcome {userInfo.username}
-                  </div>
+                  <Link to='/user-profile'>
+                    <div className='header_user_profile_menu'>
+                      Welcome {userInfo.username}
+                    </div>
+                  </Link>
                 ) : (
                   <>
                     <li className='nav__list-item nav__list-item--sign_in'>
