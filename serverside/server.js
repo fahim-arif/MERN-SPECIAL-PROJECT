@@ -3,8 +3,7 @@ import express from "express";
 import colors from "colors";
 import userRoutes from "./routes/userRoutes.js";
 import connectDB from "./config/db.js";
-import { tutors } from "./tution.js";
-import { router } from "./routes/tutionRoutes.js";
+import tutionRoutes from "./routes/tutionRoutes.js";
 
 const app = express();
 
@@ -13,13 +12,7 @@ connectDB();
 
 app.use(express.json());
 
-app.use("/api/tutors", router);
-
-app.get("/api/tutors/:id", (req, res) => {
-  const tutor = tutors.find((p) => p._id === req.params.id);
-  console.log(`${tutor}`);
-  res.json(tutor);
-});
+app.use("/api/tuition", tutionRoutes);
 
 app.use("/api/users", userRoutes);
 

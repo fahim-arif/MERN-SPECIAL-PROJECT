@@ -6,7 +6,6 @@ import "../../css/Footer.css";
 const Footer = () => {
   return (
     <>
-    
       <footer className='footer'>
         <div className='footer-wrapper'>
           <div className='site_footer'>
@@ -18,16 +17,16 @@ const Footer = () => {
                 <div className='footer_links'>
                   <ul>
                     <li>
-                      <Link to='#'>About Us</Link>
+                      <Link to='/tuition'>Tuition</Link>
                     </li>
                     <li>
-                      <Link to='#'>Our Services</Link>
+                      <Link to='#'>Your Order</Link>
                     </li>
                     <li>
-                      <Link to='#'>Privacy Policy</Link>
+                      <Link to='#'>Payment Option</Link>
                     </li>
                     <li>
-                      <Link to='#'>About Us</Link>
+                      <Link to='#'>FAQ</Link>
                     </li>
                   </ul>
                 </div>
@@ -39,16 +38,16 @@ const Footer = () => {
                 <div className='footer_links'>
                   <ul>
                     <li>
-                      <Link to='#'>About Us</Link>
+                      <Link to='/tuition'>Tuition</Link>
                     </li>
                     <li>
-                      <Link to='#'>Our Services</Link>
+                      <Link to='#'>Web Development</Link>
                     </li>
                     <li>
-                      <Link to='#'>Privacy Policy</Link>
+                      <Link to='#'>Medical</Link>
                     </li>
                     <li>
-                      <Link to='#'>About Us</Link>
+                      <Link to='#'>Designing</Link>
                     </li>
                   </ul>
                 </div>
@@ -81,16 +80,16 @@ const Footer = () => {
                 <div className='footer_links'>
                   <ul>
                     <li>
-                      <Link to='#'>About Us</Link>
+                      <Link to='/user-profile'>My Profile</Link>
                     </li>
                     <li>
-                      <Link to='#'>Our Services</Link>
+                      <Link to='/contact-us'>Contact Us</Link>
                     </li>
                     <li>
-                      <Link to='#'>Privacy Policy</Link>
+                      <Link to='/register'>Register</Link>
                     </li>
                     <li>
-                      <Link to='#'>About Us</Link>
+                      <Link to='/login'>Login</Link>
                     </li>
                   </ul>
                 </div>
@@ -128,7 +127,7 @@ const Footer = () => {
           <hr />
           <div className='footer_bottom'>
             <div className='footer_site_logo'>
-              <img src="images/logo.svg" alt="" />
+              <img src='images/logo.svg' alt='' />
             </div>
             <Link to='#'>Terms of Service</Link>
             <Link to='#'>Privacy Policy</Link>

@@ -1,8 +1,10 @@
 import express from "express";
-
-import { getTutors } from "../controller/tutionController.js";
+import { getTutorDetails, getTutors } from "../controller/tutionController.js";
 
 const router = express.Router();
-router.route("/").get(getTutors);
 
-export { router };
+router.route("/tutors").get(getTutors);
+router.route("/tutor/:id").get(getTutorDetails);
+
+export default router;
+

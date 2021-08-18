@@ -1,0 +1,63 @@
+.AvailableTutions-parent-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.AvailableTutions-child-container {
+  width: 80%;
+  font-family: "Poppins";
+}
+
+.AvailableTutions-tutions {
+  width: 850px;
+}
+
+.AvailableTutions-heading {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.AvailableTutions-liner-box {
+  height: 12px;
+  background: #fff;
+}
+.AvailableTutions-liner-mark {
+  height: 10px;
+  width: 30%;
+  background: #672c71;
+}
+.AvailableTutions-outliner {
+  height: 2px;
+  width: 100%;
+  background: black;
+}
+
+.AvailableTutions-heading2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.AvailableTutions-heading2 h4,
+h5 {
+  text-transform: none;
+}
+
+.AvailableTutions-tution-search-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+.AvailableTutions-search-box {
+  margin-top: 52px;
+}
+.AvailableTutions-search-bar {
+  width: 350px;
+  margin-bottom: 30px;
+}
+
+.AvailableTutions-search-result {
+  width: 350px;
+}

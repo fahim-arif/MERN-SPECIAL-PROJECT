@@ -103,7 +103,7 @@ const Header = () => {
                   <Link to='/about'>About</Link>
                 </li>
                 <li className='nav__list-item nav__list-item--contact'>
-                  <Link to='/about'>Contact</Link>
+                  <Link to='/contact-us'>Contact</Link>
                 </li>
                 {/* <div className='header_user_profile_menu'> */}
                 {userInfo ? (

@@ -98,7 +98,7 @@ const HomePageScreen = () => {
       <div className='hire_pro_section'>
         <Slider style={{ margin: `0 ${space}px` }} {...settings}>
           <div className='pro_section_card-wrapper'>
-            <Link to='#'>
+            <Link to='/tuition'>
               <div className='card'>
                 <div className='pro_section_card_image'>
                   <img src='images/tutor.jpg' alt='tutor' />

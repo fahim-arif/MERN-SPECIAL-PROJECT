@@ -1,0 +1,44 @@
+.Tutions-body {
+  margin-bottom: 15px;
+  filter: drop-shadow(0px 4px 20px rgba(0, 0, 0, 0.25));
+  background-color: #fff;
+  border-radius: 10px;
+  width: 100%;
+}
+
+
+.Tutions-heading {
+  width: 100%;
+  height: 40px;
+  background-color: #1713d2;
+  color: #fff;
+  font-family: "Poppins";
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.Tutions-row {
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 10px;
+}
+
+.Tutions-col {
+  width: 200px;
+  height: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}

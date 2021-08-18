@@ -4,12 +4,16 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 import { marginReducer } from "./reducers/marginReducer";
 import { userRegisterReducer, userLoginReducer } from "./reducers/userReducers";
-import { tutorListReducer } from "./reducers/tutorReducer";
+import {
+  getSingleTutorReducer,
+  tutorListReducer,
+} from "./reducers/tutorReducer";
 
 const reducer = combineReducers({
   userLogin: userLoginReducer,
   userRegister: userRegisterReducer,
   tutorList: tutorListReducer,
+  tutorInfo: getSingleTutorReducer,
   sideMargin: marginReducer,
 });
 

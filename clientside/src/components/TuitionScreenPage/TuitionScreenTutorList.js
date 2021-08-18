@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../css/Tutor.css";
-const Tutor = ({ tutor }) => {
+import "../../css/TuitionScreenTutorList.css";
+const TuitionScreenTutorList = ({ tutor }) => {
   return (
     <div className='individual_tutor'>
       <Link to={`/tuition/tutor/${tutor._id}`}>
@@ -37,4 +37,4 @@ const Tutor = ({ tutor }) => {
   );
 };
 
-export default Tutor;
+export default TuitionScreenTutorList;

@@ -1,0 +1,44 @@
+.user-icon{
+    font-size: 300px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+}
+.user-icon i{
+    color: rgba(128, 128, 128, 0.397);
+}
+.user-info a{
+    text-decoration: none;
+    color: #00cec9;
+    outline: none;
+    width: 300px;
+    text-align: center;
+    margin: 10px 0px;
+    padding: 5px 0px;
+    font-weight: bold;
+    border:1px solid #00cec9;
+    border-radius: 5px;
+
+}
+.user-navbar{
+    height: 60px;
+}
+.user-nav a{
+    text-decoration: none;
+    color: #00cec9;
+    outline: none;
+    padding: 5px 20px;
+    font-weight: bold;
+    display: inline-block;
+}
+.user-nav a:hover::after{
+    content: '';
+    width: 100%;
+    display: block;
+    height: 3px;
+    margin-top: 5px;
+    background-color: #00cec9;
+}
+.user-info-box{
+    height: 950px;
+}

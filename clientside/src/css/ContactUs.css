@@ -1,0 +1,61 @@
+/* Contact-us Musfique */
+
+.top-section {
+  width: 100%;
+  /* height: 90vh; */
+  background-image: linear-gradient(
+      rgba(61, 216, 190, 0.76),
+      rgba(61, 216, 190, 0.76)
+    ),
+    url(../components/images/bg1.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form form {
+  width: 90%;
+  border-radius: 15px;
+  margin: 50px;
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+form h1 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.contact_form input,
+.textarea {
+  margin-bottom: 20px;
+  width: 100%;
+  border: none;
+  outline: none;
+  background-color: rgb(240, 237, 237);
+  padding: 10px;
+}
+.form .textarea {
+  height: 100px;
+}
+
+.form .button {
+  font-weight: 700;
+  letter-spacing: 3px;
+  width: 200px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border: none;
+  color: #fff;
+  background-color: #00b894;
+}
+/* Contact-us Musfique */

@@ -1,10 +1,10 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import Tutor from "../components/TuitionPage/Tutor";
+import TuitionScreenTutorList from "../components/TuitionScreenPage/TuitionScreenTutorList";
 // import TutorSelector from "../components/TuitionPage/TutorSelector";
 import "../css/TuitionScreen.css";
-import tutorList from "../tution";
+import AllTutorInformation from "../AllTutorInformation";
 const HomeScreen = ({ match }) => {
   const sideMargin = useSelector((state) => state.sideMargin);
   const { margin: space } = sideMargin;
@@ -110,9 +110,12 @@ const HomeScreen = ({ match }) => {
       >
         <div className='our_tutor_list_title'>Our Tutors List</div>
         <div className='our_tutor_list_wrapper'>
-          {tutorList.map((tutor) => (
+          {AllTutorInformation.map((tutor) => (
             <div className='our_tutor_list_col'>
-              <Tutor id={tutor._id} tutor={tutor}></Tutor>
+              <TuitionScreenTutorList
+                id={tutor._id}
+                tutor={tutor}
+              ></TuitionScreenTutorList>
             </div>
           ))}
         </div>

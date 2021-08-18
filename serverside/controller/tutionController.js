@@ -22,7 +22,7 @@ const getTutors = asyncHandler(async (req, res) => {
   const selectedTutors = tutors.filter((t) => {
     return t.type === tutorType;
   });
-  
+
   const pages = Math.ceil(selectedTutors.length / pageSize);
   const filteredTutors = selectedTutors.filter((tutor) => {
     return (
@@ -34,4 +34,10 @@ const getTutors = asyncHandler(async (req, res) => {
   res.json({ filteredTutors, page, pages, tutorType });
 });
 
-export { getTutors };
+const getTutorDetails = asyncHandler(async (req, res) => {
+  const tutor = tutors.find((p) => p._id === req.params.id);
+  console.log(`${tutor}`);
+  res.json({ tutor });
+});
+
+export { getTutors, getTutorDetails };
