@@ -357,6 +357,7 @@
   position: relative;
   /* height: 540px; */
   height: 500px;
+  margin: 0 0 100px 0;
 }
 .client_saying_background {
   position: absolute;
