@@ -2,19 +2,19 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { margin } from "../../actions/marginActions";
-import { userLogout } from "../../actions/userActions";
+// import { userLogout } from "../../actions/userActions" ;
 
+import { NotificationsNone, Language, Settings } from "@material-ui/icons";
+import avatar from "../images/photo-1534665482403-a909d0d97c67.jpg";
 import "../../css/Header.css";
-
-const Header = () => {
+import "./topbar.css";
+const Topbar = () => {
   const [clicked, setClicked] = useState(false);
   const [windowSize, setWindowSize] = useState(0);
 
   const dispatch = useDispatch();
   const sideMargin = useSelector((state) => state.sideMargin);
   const { margin: space } = sideMargin;
-  const userLogin = useSelector((state) => state.userLogin);
-  const { userInfo } = userLogin;
 
   // For getting screen width and rerenders when screen width is changed //
   function debounce(fn, ms) {
@@ -54,6 +54,12 @@ const Header = () => {
   const showSideBar = () => {
     setClicked(!clicked);
   };
+  useEffect(() => {
+    const footer = document.querySelector("footer");
+    const header = document.querySelector("header");
+    header.style.display = "none";
+    footer.style.display = "none";
+  }, []);
 
   useEffect(() => {
     if (dimensions.width > 1200) {
@@ -69,12 +75,12 @@ const Header = () => {
     dispatch(margin(windowSize));
   }, [windowSize, dispatch]);
 
-  const logoutHandler = () => {
-    dispatch(userLogout());
-  };
+  // const logoutHandler = () => {
+  //   dispatch(userLogout());
+  // };
 
   return (
-    <header>
+    <section className='admin_top_bar'>
       <div style={{ margin: `0 ${space}px` }} className='header_wrapper'>
         <div className={clicked ? "opacity" : ""} onClick={showSideBar}></div>
         <nav className='nav'>
@@ -89,16 +95,32 @@ const Header = () => {
                   />
                 </div>
 
-                <Link to='/'>
+                <a href='/'>
                   <img
                     className='navbar-logo'
-                    src='images/logo.svg'
+                    src='/images/logo.svg'
                     alt='logo'
                   />
-                </Link>
+                </a>
               </div>
               <div className='header_col header_links'>
-                <li className='nav__list-item nav__list-item--services'>
+                <div className='top_bar_icon_container'>
+                  <NotificationsNone />
+                  <span className='top_icon_badge'>3</span>
+                </div>
+                <div className='top_bar_icon_container'>
+                  <Language />
+                </div>
+                <div className='top_bar_icon_container'>
+                  <Settings />
+                </div>
+                <img
+                  src={avatar}
+                  //   src='images/photo-1595502124338-950db27ea1c7.jpg'
+                  alt='avatar'
+                  className='top_bar_avatar'
+                />
+                {/* <li className='nav__list-item nav__list-item--services'>
                   <Link to='/service'>Service</Link>
                 </li>
                 <li className='nav__list-item nav__list-item--about'>
@@ -108,34 +130,6 @@ const Header = () => {
                   <Link to='/contact-us'>Contact</Link>
                 </li>
                 {/* <div className='header_user_profile_menu'> */}
-
-                {userInfo ? (
-                  <>
-                    <Link to='/user-profile'>
-                      <div className='header_user_profile_menu'>
-                        Welcome {userInfo.username}
-                      </div>
-                    </Link>
-                    <li className='nav__list-item nav__list-item--sign_in'>
-                      <button
-                        className='btn
-                        button-transparent logout-button'
-                        onClick={logoutHandler}
-                      >
-                        Logout
-                      </button>
-                    </li>
-                  </>
-                ) : (
-                  <>
-                    <li className='nav__list-item nav__list-item--sign_in'>
-                      <Link to='/sign-in'>Sign In</Link>
-                    </li>
-                    <li className='nav__list-item nav_list--join'>
-                      <Link to='/login'>Join</Link>
-                    </li>
-                  </>
-                )}
               </div>
             </ul>
 
@@ -163,7 +157,7 @@ const Header = () => {
           </div>
         </nav>
       </div>
-    </header>
+    </section>
   );
 };
-export default Header;
+export default Topbar;

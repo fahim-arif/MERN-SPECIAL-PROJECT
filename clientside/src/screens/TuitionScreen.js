@@ -8,8 +8,7 @@ import AllTutorInformation from "../AllTutorInformation";
 const HomeScreen = ({ match }) => {
   const sideMargin = useSelector((state) => state.sideMargin);
   const { margin: space } = sideMargin;
-  // const pageNumber = match.params.pageNumber || 1;
-  // const tutorType = match.params.tutorType || "Platinum";
+
 
   return (
     <>

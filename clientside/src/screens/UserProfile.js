@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../css/UserProfile.css";
 
 const UserProfile = () => {
@@ -11,9 +12,9 @@ const UserProfile = () => {
               <i class=' fas fa-user-circle '></i>
             </button>
             <div className='user-info d-flex flex-column  '>
-              <a href=''>Change Password</a>
-              <a href=''>Personal Information</a>
-              <a href=''>Academic Information </a>
+              <Link to=''>Change Password</Link>
+              <Link to=''>Personal Information</Link>
+              <Link to=''>Academic Information </Link>
             </div>
             <div className='members-plan mt-5'>
               <h1 className='fs-5 fw-bolder text-center'>Membership Plans</h1>
@@ -119,19 +120,19 @@ const UserProfile = () => {
           <div className='col-md-9 col-12 '>
             <div className='row user-navbar'>
               <div className='col user-nav'>
-                <a href=''>
+                <Link to=''>
                   <i className='fas fa-user'></i> My Profile
-                </a>
-                <a href=''>
+                </Link>
+                <Link to=''>
                   <i className='fas fa-user-edit'></i> Upgrade Tutor Membership
-                </a>
-                <a href=''>
+                </Link>
+                <Link to=''>
                   <i className='fas fa-bell'></i> My Notification
-                </a>
-                <a href=''>
+                </Link>
+                <Link to=''>
                   <i className='fas fa-info-circle'></i> Tuition Related
                   Information
-                </a>
+                </Link>
               </div>
             </div>
             <div className='row user-info-box'>
@@ -139,17 +140,17 @@ const UserProfile = () => {
                 <hr />
                 <h3 className='fw-bolder fs-5 d-flex align-items-center justify-content-between '>
                   Tutor info:{" "}
-                  <a href=''>
+                  <Link to=''>
                     <i class='fas fa-edit fs-6 text-black '>Edit info</i>
-                  </a>
+                  </Link>
                 </h3>
               </div>
               <div className='col-12 ps-5'>
                 <h3 className='fw-bolder fs-5 d-flex align-items-center justify-content-between '>
                   Tution info:{" "}
-                  <a href=''>
+                  <Link to=''>
                     <i class='fas fa-edit fs-6 text-black '>Edit info</i>
-                  </a>
+                  </Link>
                 </h3>
                 <hr />
                 <div className='mt-5 px-5 '>

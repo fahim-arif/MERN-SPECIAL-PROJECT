@@ -15,6 +15,7 @@ import SignUp from "./components/Modal/SignUp";
 import RequestTutor from "./screens/RequestTutor";
 import AvailableTuitions from "./screens/AvailableTuitions";
 import UserProfile from "./screens/UserProfile";
+
 const App = () => {
   return (
     <Router>
@@ -33,12 +34,8 @@ const App = () => {
       <Route path='/security-info' exact component={SecurityInfo}></Route>
       <Route path='/' component={HomePageScreen} exact></Route>
       <Route path='/sign-in' component={SignIn} />
-      <Route path='/login' component={SignUp} />
+      <Route path='/sign-up' component={SignUp} />
       <Route path='/contact-us' component={ContactUs} />
-
-      {/* <Route path='/tuition' component={TuitionScreen} />
-      <Route path='/tutor/:id' component={TutorScreen} />
-      <Route path='/' component={HomeScreen} exact /> */}
       <Footer />
     </Router>
   );

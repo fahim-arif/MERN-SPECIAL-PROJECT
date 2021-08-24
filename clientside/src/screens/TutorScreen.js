@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Link } from "react-router-dom";
 import ReactDOM from "react-dom";
 import "../css/IndividualTutorScreen.css";
 import "../css/IndividualTutorChatBox.css";
@@ -67,7 +68,7 @@ function TutorScreen({ match }) {
             changeState={changeState}
           />
 
-          <a
+          <Link
             ref={chatButtonRef}
             class='btn-primary btn chatStartBtn'
             onClick={() => {
@@ -75,7 +76,7 @@ function TutorScreen({ match }) {
             }}
           >
             Chat with Tutor
-          </a>
+          </Link>
         </div>
       )}
     </>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import LocalMallIcon from "@material-ui/icons/LocalMall";
 import PlaceIcon from "@material-ui/icons/Place";
 import LocalLibraryIcon from "@material-ui/icons/LocalLibrary";
@@ -12,7 +13,7 @@ function LeftTop({ tutorInfo }) {
   return (
     <div className='row'>
       <div className='col-md-4'>
-        <a className='fancybox' href=''>
+        <Link to='' className='fancybox'>
           <br />
           <img
             className='img-fluid'
@@ -20,7 +21,7 @@ function LeftTop({ tutorInfo }) {
             alt='Md.Emrul kayes Ikbal'
             width='150px'
           />
-        </a>{" "}
+        </Link>{" "}
         <br />
         <font className='tutorSceen__subHeading' size='2'>
           <strong>Member Since:</strong>{" "}
@@ -106,22 +107,21 @@ function LeftTop({ tutorInfo }) {
         />
         <strong className='tutorSceen__subHeading'>Phone:</strong>
         <font style={{ fontWeight: "800" }}>{tutorInfo.basic_info.phone}</font>
-        <a
-          style={{
-            cursor: "pointer",
-          }}
+        <Link
+          to=''
           className='fancytip'
-        ></a>{" "}
+        ></Link>{" "}
         <br />
         <EmailIcon style={{ fill: "#795548" }} className='tutorScreen__icon' />
         <strong className='tutorSceen__subHeading'>Email:</strong>{" "}
         {tutorInfo.basic_info.email}
-        <a
+        <Link
+          to=''
           style={{
             cursor: "pointer",
           }}
           className='fancytip'
-        ></a>
+        ></Link>
         <br /> <br />
       </div>
     </div>

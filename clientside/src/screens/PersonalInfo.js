@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import ServiceRegProcess from "../components/Register & Login/ServiceRegProcess";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
 import "../css/PersonalInfo.css";
 import picture from "../components/images/picture.png";

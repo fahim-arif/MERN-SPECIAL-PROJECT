@@ -1,4 +1,4 @@
-export default [
+export const TuitionList = [
   {
     district: "Dhaka",
     tutionID: "32564545",

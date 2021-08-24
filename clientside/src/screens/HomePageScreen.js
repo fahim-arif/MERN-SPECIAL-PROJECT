@@ -8,13 +8,11 @@ import "slick-carousel/slick/slick-theme.css";
 import "../css/HomePageScreen.css";
 
 const HomePageScreen = () => {
-  const [windowSize, setWindowSize] = useState(0);
   const [mobileSpace, setMobileSpace] = useState(0);
   const sideMargin = useSelector((state) => state.sideMargin);
   const { margin: space } = sideMargin;
 
   useEffect(() => {
-    console.log('effect')
     if (space > 20) {
       setMobileSpace(space);
     } else {
@@ -57,12 +55,7 @@ const HomePageScreen = () => {
       },
     ],
   };
-  // let windowSize = 0;
 
-  // if (windowSize > 1200) {
-  //   windowSize = (window.innerWidth - 1217) / 2;
-  // }
-  console.log(mobileSpace);
   return (
     <>
       <div className='hero-section'>
@@ -115,7 +108,7 @@ const HomePageScreen = () => {
                 <div className='pro_section_card_image'>
                   <img
                     src='images/photo-1508674861872-a51e06c50c9b.jpg'
-                    alt='tutor'
+                    alt='web development'
                   />
                 </div>
                 <div className='hire_pro_title'>
@@ -128,7 +121,7 @@ const HomePageScreen = () => {
             <Link to='#'>
               <div className='card'>
                 <div className='pro_section_card_image'>
-                  <img src='images/doctor.jpg' alt='tutor' />
+                  <img src='images/doctor.jpg' alt='doctor' />
                 </div>
                 <div className='hire_pro_title'>
                   <h2>Doctor</h2>
@@ -140,7 +133,7 @@ const HomePageScreen = () => {
             <Link to='#'>
               <div className='card'>
                 <div className='pro_section_card_image'>
-                  <img src='images/designer.jpg' alt='tutor' />
+                  <img src='images/designer.jpg' alt='design' />
                 </div>
                 <div className='hire_pro_title'>
                   <h2>Design</h2>
@@ -201,7 +194,7 @@ const HomePageScreen = () => {
               <img
                 className='work_section_video'
                 src='images/photo-1521791136064-7986c2920216.jpg'
-                alt='hand shake image'
+                alt='hand shake'
               />
             </div>
           </div>
@@ -284,7 +277,7 @@ const HomePageScreen = () => {
         <img
           src='images/home1.jpg'
           className='suitable_service_img'
-          alt='suitable service setion image'
+          alt='suitable service setion'
         />
       </div>
       {/* New section start */}
@@ -299,7 +292,7 @@ const HomePageScreen = () => {
               <img
                 className='client_saying_img'
                 src='images/photo-1595502124338-950db27ea1c7.jpg'
-                alt='what our client saying image'
+                alt='what our client saying'
               />
             </div>
             <div className='client_saying_card_content_wrapper'>

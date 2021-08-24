@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 
 import { register } from "../../actions/userActions";
 import Message from "../common/Message";
+import Loader from "../common/Loader";
 
 import "../../css/SignIn.css";
 
@@ -22,7 +23,6 @@ const SignUp = ({ history, location }) => {
   const { loading, error, userInfo } = userRegister;
 
   useEffect(() => {
-    console.log(location);
     if (userInfo) {
       setMessage(" Registration completed successfully");
       history.push("/");
@@ -52,6 +52,7 @@ const SignUp = ({ history, location }) => {
   };
   return (
     <>
+      {loading && <Loader></Loader>}
       {error && <Message>{error}</Message>}
       {nextStep ? (
         <div className='SignUp-container'>
@@ -69,14 +70,14 @@ const SignUp = ({ history, location }) => {
             <input
               onChange={(e) => setPassword(e.target.value)}
               className='SignIn-email'
-              type='text'
+              type='password'
               placeholder='Choose Your Password'
             />
             <input
               onChange={(e) => setConfirmPassword(e.target.value)}
               value={confirmPassword}
               className='SignIn-email'
-              type='text'
+              type='password'
               placeholder='Confirm Your Password'
             />
             <div className='alertMessage'>
